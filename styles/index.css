@@ -30,7 +30,7 @@ header {
     width: 1024px;
     margin: auto;
     /* flexbox */
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
 }
 
@@ -47,13 +47,14 @@ header {
 }
 
 #formcontainer {
-    margin: 15px;
+    margin: auto;
+    width: 300px;
     background-color: white;
     border-radius: 10px;
     /* font-family: 'OpenSans-Regular', Helvetica, sans-serif; */
     /* flexbox */
     align-self: center;
-    flex: 2 1 0;
+    /* flex: 2 1 0; */
 }
 
 .inner-formcontainer {
@@ -138,7 +139,7 @@ header {
     }
 
     #formcontainer {
-        order: 1;
+        width: 300px;
     }
     #image {
         order: 2;
@@ -157,7 +158,7 @@ header {
     }
 
     #formcontainer {
-        order: 1;
+        width: 300px;
     }
     #image {
         order: 2;
@@ -177,7 +178,7 @@ header {
 
     #formcontainer {
         order: 1;
-        width: 90%;
+        width: 300px;
     }
     #image {
         order: 2;
