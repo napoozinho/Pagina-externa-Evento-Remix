@@ -59,14 +59,14 @@ header {
 
 .inner-formcontainer {
     text-align: left;
-    padding: 35px 26px 30px;
+    padding: 35px 26px 50px 26px;
     /* flexbox */
     display: flex;
     flex-direction: column;
 }
 
 .input-container {
-    margin-bottom: 50px;
+    margin: 10px 0px 50px 0px;
 }
 
 .form-button {
