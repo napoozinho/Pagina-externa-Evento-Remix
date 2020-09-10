@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remix - Evento</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://iili.io/2F3irb.png">
+    <link rel="stylesheet" href="styles/evento.css">
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sep 16, 2020 10:30:00").getTime();
+        // var countDownDate = new Date("Sep 16, 2020 10:30:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+        // Get today's date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // agregar 0 adelante si hace falta
+        if (days < 10) {
+            days = days.toString(10);
+            days = '0' + days;
+        }
+        if (hours < 10) {
+            hours = hours.toString(10);
+            hours = '0' + hours;
+        }
+        if (minutes < 10) {
+            minutes = minutes.toString(10);
+            minutes = '0' + minutes;
+        }
+        if (seconds < 10) {
+            seconds = seconds.toString(10);
+            seconds = '0' + seconds;
+        }
+
+        // convertir todo en un arr y despues string
+        var time = days + hours + minutes + seconds;
+        var timeArr = time;
+        var timeArr = timeArr.split("");
+
+        // escribir en html seccionando cada digito
+        for (let i=1 ; i<9 ; i++) {
+            document.getElementById("digit-" + i).innerHTML = timeArr[i-1];
+        }
+        
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementsByClassName('countdown-container')[0].style.display = "none";
+            }
+        }, 1000);
+    </script>
+
+</head>
+<body>
+
+    <header>
+    </header>
+
+    <div class="container">
+
+        <article class="countdown-container">
+            <p class="texto">Faltan</p>
+            <div class="countdown">
+                <div class="digit-container">
+                    <p class="digit-label">Días</p>
+                    <p id="digit-1" class="clockDigit"></p>
+                    <p id="digit-2" class="clockDigit"></p>
+                </div>
+                <p class="separador">:</p>
+                <div class="digit-container">
+                    <p class="digit-label">Horas</p>
+                    <p id="digit-3" class="clockDigit"></p>
+                    <p id="digit-4" class="clockDigit"></p>
+                </div>
+                <p class="separador">:</p>
+                <div class="digit-container">
+                    <p class="digit-label">Minutos</p>
+                    <p id="digit-5" class="clockDigit"></p>
+                    <p id="digit-6" class="clockDigit"></p>
+                </div>
+                <p class="separador">:</p>
+                <div class="digit-container">
+                    <p class="digit-label">Segundos</p>
+                    <p id="digit-7" class="clockDigit"></p>
+                    <p id="digit-8" class="clockDigit"></p>
+                </div>
+            </div>
+            <p class="texto">para que arranque el evento de Chesterfield Remix</p>
+        </article>
+
+        <article id="evento">
+            <img src="https://via.placeholder.com/1280x720" class="responsive" alt="">
+        </article>
+
+    </div>
+</body>
+</html>

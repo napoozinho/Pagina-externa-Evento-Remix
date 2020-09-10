@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #a281af;
+    box-sizing: border-box;
+    font-family: 'OpenSans-Regular'
+}
+
+@font-face {
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-family: 'OpenSans-Regular';
+}
+@font-face {
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-family: 'OpenSans-Bold';
+}
+
+
+header {
+    height: 72px;
+    background-color: #7030a0;
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 1024px;
+    margin: auto;
+    /* flexbox */
+    display: flex;
+    flex-direction: row;
+}
+
+.responsive {
+    width: 100%;
+}
+
+#image {
+    margin: 15px;
+    border-radius: 15px;
+    /* flexbox */
+    align-self: center;
+    flex: 3 1 0;
+}
+
+#formcontainer {
+    margin: 15px;
+    background-color: white;
+    border-radius: 10px;
+    /* font-family: 'OpenSans-Regular', Helvetica, sans-serif; */
+    /* flexbox */
+    align-self: center;
+    flex: 2 1 0;
+}
+
+.inner-formcontainer {
+    text-align: left;
+    padding: 35px 26px 30px;
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    margin-bottom: 50px;
+}
+
+.form-button {
+    background-color: #7030a0;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 14px 0;
+    margin: auto;
+    border: none;
+    width: 185px;
+    height: 50px;
+    font-family: 'OpenSans-Bold';
+    transition: .2s;
+}
+
+.form-button:hover {
+    background-color: #7c3aaf;
+    cursor: pointer;
+    transform: translate(0px, -3px);
+}
+
+.form-input[type=text], input[type=password] {
+    width: 100%;
+    height: 45px;
+    padding: 8px 16px;
+    margin: 8px 0px 8px 0px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #7030a0;
+    box-sizing: border-box; 
+    line-height: 17px;
+    font-size: 13px;
+}
+
+.form-input::placeholder {
+    color: #9e99a3;
+    font-family: 'OpenSans-regular';
+}
+
+
+/* 
+##Device = Desktops
+##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/* 
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* 
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    #formcontainer {
+        order: 1;
+    }
+    #image {
+        order: 2;
+    }
+}
+
+/* 
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    #formcontainer {
+        order: 1;
+    }
+    #image {
+        order: 2;
+    }
+}
+
+/* 
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #formcontainer {
+        order: 1;
+        width: 90%;
+    }
+    #image {
+        order: 2;
+        width: 90%;
+    }
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    #formcontainer {
+        order: 1;
+        width: 90%;
+    }
+    #image {
+        order: 2;
+        width: 90%;
+    }
+}

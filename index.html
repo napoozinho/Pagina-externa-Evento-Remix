@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remix - Iniciar sesión</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://iili.io/2F3irb.png">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+
+    <header>
+    </header>
+
+    <div class="container">
+
+        <article id="image">
+            <img src="https://via.placeholder.com/640x480" class="responsive" alt="">
+        </article>
+
+        <article id="formcontainer">
+            <form class="inner-formcontainer" action="/evento" method="POST">
+                <div class="input-container">
+                    <!-- <label class="form-label" for="email">Correo electrónico</label> -->
+                    <input class="form-input" type="text" placeholder="USUARIO" name="email" id="email" required>
+                    <!-- <label class="form-label" for="password">Contraseña</label> -->
+                    <input class="form-input" type="password" placeholder="CONTRASEÑA" name="password" id="password" required>
+                </div>
+                <button class="form-button" type="submit">INICIAR SESIÓN</button>
+            </form>
+        </article>
+        
+    </div>
+    
+</body>
+</html>
