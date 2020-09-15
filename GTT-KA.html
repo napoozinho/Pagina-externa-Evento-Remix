@@ -11,6 +11,7 @@
         // Set the date we're counting down to
         var countDownDate = new Date("Sep 16, 2020 19:00:00").getTime();
         // var countDownDate = new Date("Sep 16, 2020 10:30:00").getTime();
+        // var countDownDate = new Date("Sep 16, 2020 19:00:00").getTime();
         
         // Update the count down every 1 second
         var x = setInterval(function() {
@@ -58,7 +59,7 @@
         // If the count down is finished, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementsByClassName('countdown-container')[0].style.display = "none";
+            document.getElementsByClassName('countdown-container-new')[0].style.display = "none";
             }
         }, 1000);
     </script>
@@ -72,6 +73,7 @@
     <div class="container">
 
         <article class="countdown-container-new">
+            <p class="texto">Falta</p>
             <div class="countdown">
                 <div class="digit-container">
                     <p class="digit-label">Días</p>
@@ -97,6 +99,7 @@
                     <p id="digit-8" class="clockDigit"></p>
                 </div>
             </div>
+            <p class="texto">para el evento</p>
         </article>
 
     </div>
